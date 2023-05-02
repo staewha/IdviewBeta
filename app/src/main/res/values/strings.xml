@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Idview_beta</string>
+    <string name="idview">IDVIEW</string>
+    <string name="sample_short">Lorem Ipsum is simply dummy text</string>
+    <string name="sample_long">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+
+    <string name="policy_agreement_title">앱 서비스 권한 안내</string>
+    <string name="reject_authority">*권한 거부 시 아이디뷰 이용이 어려울 수 있어요.</string>
+    <string name="agree_authority">동의하고 아이디뷰 시작하기</string>
+
+    <string name="pre_login_title">내 정보는 내가 지킨다</string>
+    <string name="start_with_email">이메일로 시작하기</string>
+    <string name="account_check">이미 계정이 있나요?</string>
+    <string name="connect_to_login"><u>로그인</u></string>
+
+    <string name="signup">회원가입</string>
+    <string name="email">이메일</string>
+    <string name="match_email">*사용 가능한 이메일입니다.</string>
+    <string name="unmatch_email">*사용 가능한 이메일을 입력해주세요.</string>
+    <string name="password">비밀번호</string>
+    <string name="re_password">비밀번호 확인</string>
+    <string name="match_password">*비밀번호가 일치합니다.</string>
+    <string name="unmatch_password">*비밀번호가 일치하지 않습니다.</string>
+    <string name="next">다음으로</string>
+
+    <string name="second_verify">2번째 인증</string>
+    <string name="signup2Detail">아이디뷰는 더 안전한 보안을 위해\n회원 가입 시 2단계 인증을 진행하고 있어요.</string>
+    <string name="sample_email">sample@gmail.com</string>
+    <string name="to">으로</string>
+    <string name="send_verify_code">인증번호를 보냈어요.</string>
+    <string name="sample_time">10:00</string>
+    <string name="input_code">내로 입력해주세요!</string>
+    <string name="confirm">확인</string>
+    <string name="not_email">*이메일이 오지 않나요?</string>
+    <string name="resend_email"><u>재전송하기</u></string>
+
+    <string name="agree_policy">약관에 동의해주세요</string>
+    <string name="policy_title">아이디뷰는 고객님의 개인정보를 지키기위해서\n이용약관 동의와 개인정보 이용 및 수집 동의서를 받고 있어요.</string>
+    <string name="agree_all_policy">모두 동의할게요!</string>
+    <string name="agree_all_policy_detail">아이디뷰 이용을 위해 모든 내용에 동의합니다.</string>
+
+    <string name="signup3_title">마지막 단계에요!\n저희가 어떻게 불러드리면 될까요?</string>
+    <string name="input_nickname">닉네임을 입력해주세요</string>
+    <string name="start_idview">아이디뷰 시작!</string>
+
+    <string name="login_title">로그인</string>
+    <string name="forget_passwd">비밀번호를 잊으셨나요?</string>
+    <string name="find_passwd"><u>비밀번호 찾기</u></string>
+
+    <string name="home">홈</string>
+    <string name="hello_idview">안녕하세요 룡깅 님!</string>
+    <string name="home_detail">오늘도 아이디뷰와 함께 즐거운 하루 되세요!</string>
+    <string name="my_service">\t\t내가 가입한 서비스</string>
+    <string name="ci_service">\n\t\t연동 서비스</string>
+    <string name="privacy_map">개인정보 맵</string>
+
+    <string name="set_ci_login">연동 로그인 설정</string>
+    <string name="check_ci_service">연동 서비스 확인</string>
+    <string name="set_ci_detail">구글, 카카오, 네이버 계정을 연결해두면,\n연동 서비스 확인 기능을 사용할 수 있어요!</string>
+    <string name="check_ci">연동 서비스 확인하러 가기</string>
+    <string name="check_ci_detail">구글, 카카오, 네이버 로그인으로 가입한 서비스를\n한눈에 확인할 수 있어요.</string>
+    <string name="search_service">서비스 검색</string>
+    <string name="do_ci">연동 로그인 하기</string>
+    <string name="complete_ci">연동 완료!!</string>
+    <string name="common_service">보통 이런 서비스가 연결 되어있어요.</string>
+    <string name="need_ci_agree">서비스 목록을 불러오기 위해\n이용 동의가 필요해요!</string>
+    <string name="agree_ci">동의하기 </string>
+
+    <string name="all">전체</string>
+    <string name="google">구글</string>
+    <string name="kakao">카카오</string>
+    <string name="naver">네이버</string>
+
+    <string name="simple_policy">간단 개인정보 처리방침</string>
+    <string name="simple_policy_detail">서비스의 개인정보 처리방침을 요약한 내용을 볼 수 있어요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

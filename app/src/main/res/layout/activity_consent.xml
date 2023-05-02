@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsentActivity">
+
+    <TextView
+        android:id="@+id/policyAgreeTitleTextView"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="78dp"
+        android:gravity="center_horizontal"
+        android:text="@string/policy_agreement_title"
+        android:textSize="22sp"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/policyTextView1"
+        android:layout_width="321dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="19dp"
+        android:background="@color/gray_50"
+        android:text="@string/sample_long"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/policyTextView2"
+        android:layout_width="321dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="19dp"
+        android:background="@color/gray_50"
+        android:text="@string/sample_long"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/policyTextView3"
+        android:layout_width="321dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="19dp"
+        android:background="@color/gray_50"
+        android:text="@string/sample_long"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/policyTextView4"
+        android:layout_width="321dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="19dp"
+        android:background="@color/gray_50"
+        android:text="@string/sample_long"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/policyRejectTextView"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="59dp"
+        android:text="@string/reject_authority"
+        android:textColor="@color/gray_400"
+        android:textSize="12sp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPolicyAgree"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="601dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/agree_authority"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
