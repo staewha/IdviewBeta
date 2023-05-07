@@ -5,14 +5,26 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ViewPagerAdapter (fragment : FragmentActivity) : FragmentStateAdapter(fragment){
-    override fun getItemCount(): Int = 4
+    var fragments: ArrayList<Fragment> = ArrayList()
+
+    override fun getItemCount(): Int {
+        return fragments.size
+    }
 
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> Service1Fragment()
-            1 -> Service2Fragment()
-            2 -> Service3Fragment()
-            else -> Service4Fragment()
-        }
+        return fragments[position]
     }
+
+    fun addFragment(fragment: Fragment) {
+        fragments.add(fragment)
+        notifyItemInserted(fragments.size - 1)
+        //TODO: notifyItemInserted!!
+    }
+
+    fun removeFragement() {
+        fragments.removeLast()
+        notifyItemRemoved(fragments.size)
+        //TODO: notifyItemRemoved!!
+    }
+
 }
