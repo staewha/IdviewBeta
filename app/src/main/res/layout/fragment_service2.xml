@@ -55,7 +55,7 @@
         app:queryHint="서비스 검색"/>
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/serviceTab"
+        android:id="@+id/service2Tab"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
@@ -85,13 +85,13 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/serviceViewPager"
+        android:id="@+id/service2ViewPager"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/serviceTab"
+        app:layout_constraintTop_toBottomOf="@id/service2Tab"
         />
 
 
