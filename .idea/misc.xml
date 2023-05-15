@@ -5,7 +5,14 @@
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/custom_button.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/custom_search_view.xml" value="0.255" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/green_stroke_button.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/round_tab_layout.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/service_tab_background.xml" value="0.1475" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/service_tab_selected.xml" value="0.1475" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/service_tab_unselected.xml" value="0.1475" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/white_round_button.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/drawable/white_round_gray_stroke_button.xml" value="0.4" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_connect_ci.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_consent.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_home.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_intro.xml" value="0.2210144927536232" />
@@ -15,9 +22,9 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_signup1.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_signup2.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/activity_signup3.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_agree.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_agree.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_all.xml" value="0.536" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service1.xml" value="0.4" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service1.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service2.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service3.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service4.xml" value="0.24947916666666667" />
