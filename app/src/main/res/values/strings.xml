@@ -64,6 +64,7 @@
     <string name="do_ci">연동 로그인 하기</string>
     <string name="complete_ci">연동 완료!!</string>
     <string name="example_service1">보통 이런 서비스가 연결 되어있어요.</string>
+    <string name="example_service2">→ 브랜디, 티빙, 웨이브, 다방 ... </string>
     <string name="need_ci_agree">앗, 서비스 목록을 불러오기 위해\n이용 동의가 필요해요!</string>
     <string name="go_ci">연동하러 가기</string>
     <string name="agree_ci">동의하기 </string>

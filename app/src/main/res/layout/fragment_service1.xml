@@ -56,7 +56,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="188dp"
         android:background="@drawable/white_round_button"
-        android:gravity=""
+        android:gravity="left|center"
         android:text="@string/my_service"
         android:textSize="14sp"
         android:textStyle="bold"
