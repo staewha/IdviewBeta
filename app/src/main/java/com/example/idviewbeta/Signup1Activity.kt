@@ -74,10 +74,10 @@ class Signup1Activity : AppCompatActivity() {
             val email = userEmail.text.toString()
             val password = userPasswd.text.toString()
 
-            Thread {
-                val connection = ConnectFlask()
-                connection.getServer(email, password)
-            }
+
+            val connection = ConnectFlask()
+            connection.getServer(email, password)
+
             val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
             startActivity(signup1Intent)
         }
