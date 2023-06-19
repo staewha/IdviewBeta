@@ -73,9 +73,9 @@ class Signup1Activity : AppCompatActivity() {
         btnNextSignup1.setOnClickListener {
             val email = userEmail.text.toString()
             val password = userPasswd.text.toString()
+            val url = "signup"
 
-
-            val connection = ConnectFlask()
+            val connection = ConnectFlask(url)
             connection.getServer(email, password)
 
             val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)

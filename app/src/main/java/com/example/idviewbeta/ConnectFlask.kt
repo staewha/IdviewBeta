@@ -7,9 +7,9 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import java.io.IOException
 
-class ConnectFlask {
+class ConnectFlask(private val url: String) {
     // API 엔드포인트 설정
-    private val testUrl : String = "http://idviewdb.cmlkz0bqlgxx.ap-northeast-2.rds.amazonaws.com:5000/api/signup"
+    private val testUrl: String = "http://localhost/api/$url"
     fun getServer(loginEmailAddr:String, loginPasswd:String) {
         try {
             // OkHttpClient 생성

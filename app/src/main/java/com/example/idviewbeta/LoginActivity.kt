@@ -42,10 +42,10 @@ class LoginActivity : AppCompatActivity() {
             val loginEmailAddr = loginBinding.editTextLoginEmailAddress.text.toString()
             val loginPasswd = loginBinding.editTextLoginPasswd.text.toString()
 
-            Thread {
-                val connection = ConnectFlask()
-                connection.getServer(loginEmailAddr, loginPasswd)
-            }
+            val url = "login"
+
+            val connection = ConnectFlask(url)
+            connection.getServer(loginEmailAddr, loginPasswd)
             val loginIntent = Intent(this@LoginActivity, HomeActivity::class.java)
             startActivity(loginIntent)
         }
