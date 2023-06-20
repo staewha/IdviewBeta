@@ -49,10 +49,10 @@
 
     <string name="home">홈</string>
     <string name="hello_idview">안녕하세요 룡깅 님!</string>
-    <string name="home_detail">오늘도 아이디뷰와 함께 즐거운 하루 되세요!</string>
-    <string name="my_service">\t\t내가 가입한 서비스</string>
-    <string name="ci_service">\n\t\t연동 서비스</string>
-    <string name="privacy_map">개인정보 맵</string>
+    <string name="home_detail">아이디뷰와 함께 개인정보를 지켜볼까요?</string>
+    <string name="howManyService">지금 몇 개의 서비스에\n내 개인정보를 제공하고 있을까요?</string>
+    <string name="not_connect_yet">아직 연동이 안됐어요!</string>
+    <string name="go_policy_ci"><u>개인정보 연동하러 가기 ></u></string>
 
     <string name="set_ci_login">연동 로그인 설정</string>
     <string name="check_ci_service">연동 서비스 확인</string>
@@ -78,5 +78,11 @@
     <string name="simple_policy_detail">서비스의 개인정보 처리방침을 요약한 내용을 볼 수 있어요.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string name="service4_title">마이페이지</string>
+    <string name="edit_prof">프로필 편집</string>
+    <string name="announcement">\t\t\t공지사항</string>
+    <string name="app_config">\t\t\t앱 설정</string>
+    <string name="app_policy">\t\t\t개인정보처리방침</string>
 
 </resources>

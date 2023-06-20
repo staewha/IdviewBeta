@@ -1,11 +1,19 @@
 package com.example.idviewbeta
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.res.AssetManager
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.googlecode.tesseract.android.TessBaseAPI
+import java.io.*
 
 class ConnectCiActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_connect_ci)
@@ -31,5 +39,7 @@ class ConnectCiActivity : AppCompatActivity() {
             val returnIntent = Intent(this@ConnectCiActivity, HomeActivity::class.java)
             startActivity(returnIntent)
         }
+
     }
+
 }

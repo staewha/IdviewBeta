@@ -7,99 +7,124 @@
     android:background="#EDEDED"
     tools:context=".Service1Fragment">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/user"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="13dp"
-        android:text="@string/home"
-        android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:paddingEnd="233dp"
+            android:text="@string/home"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/user" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/service1Nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="24dp"
         android:text="@string/hello_idview"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/btnMyService"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/countServiceLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
         android:fontFamily="@font/noto_sans_kr_light"
         android:text="@string/home_detail"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/btnMyService"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/countServiceLayout"
+        app:layout_constraintTop_toBottomOf="@+id/service1Nickname" />
 
-    <android.widget.Button
-        android:id="@+id/btnMyService"
+    <LinearLayout
+        android:id="@+id/countServiceLayout"
         android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="188dp"
-        android:background="@drawable/white_round_button"
-        android:gravity="left|center"
-        android:text="@string/my_service"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:layout_height="240dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/white_round_box"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/service1Nickname">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="105dp"
-        android:layout_height="100dp"
-        android:background="#FFFFFFFF"
-        android:text=" 30"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="21dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="@string/howManyService"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/not_connect_yet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="95dp"
+            android:paddingStart="80dp"
+            android:paddingEnd="21dp"
+            android:text="@string/not_connect_yet"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_600"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGoPolicyCi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="130dp"
+            android:paddingEnd="21dp"
+            android:background="@drawable/white_round_button"
+            android:text="@string/go_policy_ci"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ciNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="29dp"
+        android:visibility="gone"
+        android:text="30"
         android:textSize="74sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        android:textColor="@color/primary_600"
+        app:layout_constraintTop_toTopOf="@id/countServiceLayout"
+        app:layout_constraintEnd_toEndOf="@id/countServiceLayout"
+        />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="320dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="253dp"
-        android:text="@string/ci_service"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        android:text="개"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:background="#FFFFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="215dp"
-        android:layout_height="100dp"
-        android:text="개\n"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:gravity="bottom"
-        android:background="#FFFFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/textView22"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
+        app:layout_constraintTop_toTopOf="@id/countServiceLayout"
+        app:layout_constraintStart_toEndOf="@id/ciNumber"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
