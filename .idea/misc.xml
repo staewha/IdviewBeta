@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
@@ -34,10 +35,15 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service3.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/fragment_service4.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/IdviewBeta/app/src/main/res/layout/service_list.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/user/Documents/GitHub/IdviewBeta/app/src/main/res/layout/activity_signup2.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/user/Documents/GitHub/IdviewBeta/app/src/main/res/layout/fragment_agree.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/user/Documents/GitHub/IdviewBeta/app/src/main/res/layout/fragment_google.xml" value="0.23148148148148148" />
+        <entry key="..\:/Users/user/Documents/GitHub/IdviewBeta/app/src/main/res/layout/fragment_service1.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/user/Documents/GitHub/IdviewBeta/app/src/main/res/layout/service_list.xml" value="0.23148148148148148" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

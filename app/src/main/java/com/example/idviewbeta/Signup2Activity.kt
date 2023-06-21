@@ -26,7 +26,7 @@ class Signup2Activity : AppCompatActivity() {
         }
 
         // 시간 text view
-        val timeTextView = findViewById<TextView>(R.id.verifyTimeTextview)
+//        val timeTextView = findViewById<TextView>(R.id.verifyTimeTextview)
 
         // 인증 코드 입력 edit text
         signup2Binding.verifyCodeEditText.filters = arrayOf(InputFilter { source, _, _, _, _, _ ->

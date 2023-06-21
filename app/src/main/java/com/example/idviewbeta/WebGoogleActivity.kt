@@ -62,7 +62,7 @@ class WebGoogleActivity : AppCompatActivity() {
             val contentHeight = googleWebView.contentHeight
             var ocrResult = ""
             Thread {
-                while (!ocrResult.contains("약관")) {
+                while (!ocrResult.contains("Privacy")) {
                     val captureBitmap = capture()
                     ocrResult = processImage(captureBitmap)
                     top += googleWebView.height

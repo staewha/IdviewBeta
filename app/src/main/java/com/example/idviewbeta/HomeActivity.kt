@@ -40,12 +40,45 @@ class HomeActivity : AppCompatActivity() {
         TabLayoutMediator(homeBinding.homeTabLayout, homeBinding.homeViewPager) {tab, position ->
             when(position) {
                 // icon들 타입이 안맞아서.. 해결이 안됨.. png파일이나 xml 파일을 왜 int로 인식하는 건지 알 수 X
-                0 -> tab.text = "탭1"
-                1 -> tab.text = "탭2"
-                2 -> tab.text = "탭3"
-                3 -> tab.text = "탭4"
+                0 -> tab.text = "Home"
+                1 -> tab.text = "List"
+                2 -> tab.text = "Map"
+                3 -> tab.text = "MyPage"
             }
         }.attach()
 
+    }
+
+}
+
+class TestData(
+    private var serviceName : String? = null,
+    private var serviceDomain : String? = null,
+    private var policyDomain : String? = null,
+    private var privacyList : List<String>? = null
+) {
+    fun getServiceName() : String? {
+        return serviceName
+    }
+    fun setServiceName(serviceName : String) {
+        this.serviceName = serviceName
+    }
+    fun getServiceDomain() : String? {
+        return serviceDomain
+    }
+    fun setServiceDomain(serviceDomain : String) {
+        this.serviceDomain = serviceDomain
+    }
+    fun getPolicyDomain() : String? {
+        return policyDomain
+    }
+    fun setPolicyDomain(policyDomain : String) {
+        this.policyDomain = policyDomain
+    }
+    fun getPrivacyList() : List<String>? {
+        return privacyList
+    }
+    fun setPrivacyList(privacyList: List<String>?) {
+        this.privacyList = privacyList
     }
 }

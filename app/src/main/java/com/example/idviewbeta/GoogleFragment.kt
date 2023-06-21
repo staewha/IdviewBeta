@@ -5,55 +5,45 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_google.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [GoogleFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class GoogleFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val dataList : ArrayList<TestData> = arrayListOf(
+        TestData("Dreamhack", "dreamhack.io", "dreamhack.io/services/privacy",
+            listOf("이름", "이메일", "전화번호", "주소", "생년월일", "성별", "결제 정보")),
+        TestData("JOBKOREA", "jobkorea.co.kr", "jobkorea.co.kr/service/PolicyPrivacy",
+            listOf("이름", "이메일", "전화번호", "주소", "성별")),
+        TestData("Programmers", "programmers.co.kr", "programmers.co.kr/privacy",
+            listOf("아이디", "이름", "이메일", "전화번호", "주소", "생년월일", "결제 정보")),
+        TestData("RIDI", "ridibooks.com", "policy.ridi.com/legal/privacy",
+            listOf("아이디", "이름", "이메일", "전화번호", "주소", "생년월일", "성별", "결제 정보")),
+        TestData("교보문고", "product.kyobobook.co.kr", "kyobobook.co.kr/contents/privacy-policy",
+            listOf("아이디", "비밀번호", "이름", "이메일", "전화번호", "주소", "생년월일", "성별", "배송정보", "결제 정보")),
+        TestData("인프런", "inflearn.com", "inflearn.com/policy/privacy",
+            listOf("이름", "이메일", "전화번호", "주소", "생년월일", "성별", "결제 정보")),
+    )
+
+    private lateinit var listAdapter: ServiceListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_google, container, false)
+        val googleFragmentView = inflater.inflate(R.layout.fragment_google, container, false)
+        return googleFragmentView
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment GoogleFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            GoogleFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // 원래는 homeActivity에서 선언한 후에 전달 받아야하지만... 일단 복잡하니까 넘어갑시다. 마감 3시간 남았다.
+        val data: ArrayList<TestData> = dataList
+        listAdapter = ServiceListAdapter(data)
+        googleServiceList.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        googleServiceList.adapter = listAdapter
     }
 }

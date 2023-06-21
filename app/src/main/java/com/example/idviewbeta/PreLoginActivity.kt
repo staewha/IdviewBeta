@@ -26,81 +26,81 @@ class PreLoginActivity : AppCompatActivity() {
             startActivity(connectSignupIntent)
         }
 
-        insertService("Dreamhack", "dreamhack.io", "dreamhack.io/services/privacy")
-        insertService("JOBKOREA", "jobkorea.co.kr", "jobkorea.co.kr/service/PolicyPrivacy")
-        insertService("Programmers", "programmers.co.kr", "programmers.co.kr/privacy")
-        insertService("RIDI", "ridibooks.com", "policy.ridi.com/legal/privacy")
-        insertService("교보문고", "product.kyobobook.co.kr", "kyobobook.co.kr/contents/privacy-policy")
-        insertService("인프런", "inflearn.com", "inflearn.com/policy/privacy")
-
-        insertPrivacy("Dreamhack",
-            id = false,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = true
-        )
-        insertPrivacy("JOBKOREA",
-            id = false,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = false,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = false)
-        insertPrivacy("Programmers",
-            id = true,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = false,
-            shippingInfo = false,
-            paymentInfo = true)
-        insertPrivacy("RIDI",
-            id = true,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = true)
-        insertPrivacy("교보문고",
-            id = true,
-            passwd = true,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = true,
-            paymentInfo = true)
-        insertPrivacy("인프런",
-            id = false,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = true
-        )
+//        insertService("Dreamhack", "dreamhack.io", "dreamhack.io/services/privacy")
+//        insertService("JOBKOREA", "jobkorea.co.kr", "jobkorea.co.kr/service/PolicyPrivacy")
+//        insertService("Programmers", "programmers.co.kr", "programmers.co.kr/privacy")
+//        insertService("RIDI", "ridibooks.com", "policy.ridi.com/legal/privacy")
+//        insertService("교보문고", "product.kyobobook.co.kr", "kyobobook.co.kr/contents/privacy-policy")
+//        insertService("인프런", "inflearn.com", "inflearn.com/policy/privacy")
+//
+//        insertPrivacy("Dreamhack",
+//            id = false,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = true
+//        )
+//        insertPrivacy("JOBKOREA",
+//            id = false,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = false,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = false)
+//        insertPrivacy("Programmers",
+//            id = true,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = false,
+//            shippingInfo = false,
+//            paymentInfo = true)
+//        insertPrivacy("RIDI",
+//            id = true,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = true)
+//        insertPrivacy("교보문고",
+//            id = true,
+//            passwd = true,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = true,
+//            paymentInfo = true)
+//        insertPrivacy("인프런",
+//            id = false,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = true
+//        )
 
 
     }

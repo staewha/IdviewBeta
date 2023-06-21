@@ -30,7 +30,8 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/serviceHomeStateBar"/>
         <activity
             android:name=".Signup3Activity"
             android:exported="false" />
