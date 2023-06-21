@@ -3,6 +3,7 @@ package com.example.idviewbeta
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -38,19 +39,27 @@ class Service1Fragment : Fragment() {
         btnGoPolicyCi.setOnClickListener{
             val doCiIntent = Intent(requireActivity(), ConnectCiActivity::class.java)
             startActivity(doCiIntent)
+            updateServiceInfo()
         }
 
         val not_connect_yet = service1Binding.notConnectYet
         val ciNumber = service1Binding.ciNumber
         val gae = service1Binding.gae
 
-        if (isConnected) {
-            btnGoPolicyCi.visibility = View.GONE
-            not_connect_yet.visibility = View.GONE
-            ciNumber.visibility = View.VISIBLE
-            gae.visibility = View.VISIBLE
-        }
+//        if (isConnected) {
+//            btnGoPolicyCi.visibility = View.GONE
+//            not_connect_yet.visibility = View.GONE
+//            ciNumber.visibility = View.VISIBLE
+//            gae.visibility = View.VISIBLE
+//        }
 
+    }
+
+    fun updateServiceInfo() {
+        btnGoPolicyCi.visibility = View.GONE
+        not_connect_yet.visibility = View.GONE
+        ciNumber.visibility = View.VISIBLE
+        gae.visibility = View.VISIBLE
     }
 
 }

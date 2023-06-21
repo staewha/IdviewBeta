@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    tools:context=".ServiceDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/ServiceDetailLayout1"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:paddingEnd="233dp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/user" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/simplePolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/simple_policy"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ServiceDetailLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/ServiceDetailLayout1" />
+
+    <TextView
+        android:id="@+id/simplePolicyDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="147dp"
+        android:fontFamily="@font/noto_sans_kr_light"
+        android:text="@string/simple_policy_detail"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ServiceDetailLayout3"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    <LinearLayout
+        android:id="@+id/ServiceDetailLayout2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/simplePolicyDetail"
+        app:layout_constraintStart_toStartOf="@id/ServiceDetailLayout3">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/simpleServiceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dreamhack"
+                android:textSize="24sp"
+                android:textColor="@color/primary_700"
+                android:textStyle="bold"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="(은)는"
+                android:textSize="24sp"
+                android:textColor="@color/gray_400"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:paddingTop="8dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/simplePolicyList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름, 이메일, 전화번호"
+                android:textSize="24sp"
+                android:textColor="@color/primary_700"
+                android:textStyle="bold"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="등을"
+                android:textSize="24sp"
+                android:textColor="@color/gray_400"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="수집합니다."
+            android:textSize="24sp"
+            android:textColor="@color/gray_400"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ServiceDetailLayout3"
+        android:layout_width="320dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/white_round_box"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ServiceDetailLayout2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="0dp"
+            android:text="@string/collect_list"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="0dp"
+            android:text="이름\t\t\t\t\t\t\t\t\t\t\t\t\t이메일\n\n전화번호\t\t\t\t\t\t\t\t\t\t주소\n\n생년월일\t\t\t\t\t\t\t\t\t\t성별\n\n결제 정보"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/check_policy_directly"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ServiceDetailLayout3"
+        app:layout_constraintStart_toStartOf="@id/ServiceDetailLayout3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

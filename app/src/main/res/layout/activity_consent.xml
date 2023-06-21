@@ -21,61 +21,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/policyTextView1"
-        android:layout_width="321dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="19dp"
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="19dp"
-        android:background="@color/gray_50"
-        android:text="@string/sample_long"
-        android:fontFamily="@font/noto_sans_kr_regular"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        android:orientation="vertical"
+        android:background="@color/background_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/policyTextView2"
-        android:layout_width="321dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="19dp"
-        android:background="@color/gray_50"
-        android:text="@string/sample_long"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="28sp"
+                android:layout_height="20sp"
+                android:paddingStart="0dp"
+                android:paddingEnd="8dp"
+                android:src="@drawable/file_icon"/>
 
-    <TextView
-        android:id="@+id/policyTextView3"
-        android:layout_width="321dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="19dp"
-        android:background="@color/gray_50"
-        android:text="@string/sample_long"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="파일 저장 권한"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/policyTextView4"
-        android:layout_width="321dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="428dp"
-        android:layout_marginEnd="19dp"
-        android:background="@color/gray_50"
-        android:text="@string/sample_long"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="개인정보 크롤링 정보를 불러오기 위해 \n파일 저장 권한이 필요합니다."
+            android:textSize="16sp"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/policyRejectTextView"

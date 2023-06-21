@@ -75,14 +75,15 @@
     <string name="naver">네이버</string>
 
     <string name="simple_policy">간단 개인정보 처리방침</string>
-    <string name="simple_policy_detail">서비스의 개인정보 처리방침을 요약한 내용을 볼 수 있어요.</string>
+    <string name="simple_policy_detail">서비스의 개인정보 처리방침을 요약한 내용을\n볼 수 있어요.</string>
+    <string name="collect_list">수집항목</string>
+    <string name="check_policy_directly"><u>개인정보 처리방침 직접 확인하기</u></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <string name="service4_title">마이페이지</string>
     <string name="edit_prof">프로필 편집</string>
     <string name="announcement">\t\t\t공지사항</string>
     <string name="app_config">\t\t\t앱 설정</string>
     <string name="app_policy">\t\t\t개인정보처리방침</string>
-
 </resources>

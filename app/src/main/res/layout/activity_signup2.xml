@@ -86,35 +86,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/verifyTimeTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="301dp"
-            android:text="@string/sample_time"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/verifyTimeTextview"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="301dp"-->
+<!--            android:text="@string/sample_time"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="301dp"
-            android:text="@string/input_code"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/verifyTimeTextview"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView9"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:layout_marginTop="301dp"-->
+<!--            android:text="@string/input_code"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/verifyTimeTextview"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <EditText
             android:id="@+id/verifyCodeEditText"
             android:layout_width="290dp"
-            android:layout_height="36dp"
+            android:layout_height="45dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="342dp"
+            android:layout_marginTop="312dp"
             android:ems="10"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
             android:id="@+id/btnSignup2Confirm"
             android:layout_width="65dp"
             android:layout_height="36dp"
-            android:layout_marginTop="342dp"
+            android:layout_marginTop="312dp"
             android:text="@string/confirm"
             app:layout_constraintStart_toEndOf="@+id/verifyCodeEditText"
             app:layout_constraintTop_toTopOf="parent" />
@@ -134,7 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="360dp"
             android:text="@string/not_email"
             android:textSize="12sp"
             android:fontWeight="300"
@@ -146,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="360dp"
             android:text="@string/resend_email"
             android:textSize="12sp"
             android:fontWeight="300"

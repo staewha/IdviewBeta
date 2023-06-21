@@ -5,7 +5,7 @@ import androidx.room.*
 @Dao
 interface ConsignmentServiceDao {
 
-    @Query("SELECT * FROM ConsignmentCompany")
+    @Query("SELECT * FROM ConsignmentService")
     fun getAllConService() : List<ConsignmentService>
 
     @Insert

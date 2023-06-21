@@ -25,92 +25,88 @@ class PreLoginActivity : AppCompatActivity() {
             val connectSignupIntent = Intent(this@PreLoginActivity, Signup1Activity::class.java)
             startActivity(connectSignupIntent)
         }
-
-        insertService("Dreamhack", "dreamhack.io", "dreamhack.io/services/privacy")
-        insertService("JOBKOREA", "jobkorea.co.kr", "jobkorea.co.kr/service/PolicyPrivacy")
-        insertService("Programmers", "programmers.co.kr", "programmers.co.kr/privacy")
-        insertService("RIDI", "ridibooks.com", "policy.ridi.com/legal/privacy")
-        insertService("교보문고", "product.kyobobook.co.kr", "kyobobook.co.kr/contents/privacy-policy")
-        insertService("인프런", "inflearn.com", "inflearn.com/policy/privacy")
-
-        insertPrivacy("Dreamhack",
-            id = false,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = true
-        )
-        insertPrivacy("JOBKOREA",
-            id = false,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = false,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = false)
-        insertPrivacy("Programmers",
-            id = true,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = false,
-            shippingInfo = false,
-            paymentInfo = true)
-        insertPrivacy("RIDI",
-            id = true,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = true)
-        insertPrivacy("교보문고",
-            id = true,
-            passwd = true,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = true,
-            paymentInfo = true)
-        insertPrivacy("인프런",
-            id = false,
-            passwd = false,
-            name = true,
-            emailAddress = true,
-            phoneNum = true,
-            address = true,
-            birth = true,
-            sex = true,
-            shippingInfo = false,
-            paymentInfo = true
-        )
+        // 이것두... 나중에 DB 고치면서 같이 고쳐서 데이터 넣기.. 화산의 제자는 해낼 수 있다.. 화아팅...
+//        insertService("Dreamhack", "dreamhack.io", "dreamhack.io/services/privacy")
+//        insertService("JOBKOREA", "jobkorea.co.kr", "jobkorea.co.kr/service/PolicyPrivacy")
+//        insertService("Programmers", "programmers.co.kr", "programmers.co.kr/privacy")
+//        insertService("RIDI", "ridibooks.com", "policy.ridi.com/legal/privacy")
+//        insertService("교보문고", "product.kyobobook.co.kr", "kyobobook.co.kr/contents/privacy-policy")
+//        insertService("인프런", "inflearn.com", "inflearn.com/policy/privacy")
+//
+//        insertPrivacy("Dreamhack",
+//            id = false,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = true
+//        )
+//        insertPrivacy("JOBKOREA",
+//            id = false,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = false,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = false)
+//        insertPrivacy("Programmers",
+//            id = true,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = false,
+//            shippingInfo = false,
+//            paymentInfo = true)
+//        insertPrivacy("RIDI",
+//            id = true,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = true)
+//        insertPrivacy("교보문고",
+//            id = true,
+//            passwd = true,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = true,
+//            paymentInfo = true)
+//        insertPrivacy("인프런",
+//            id = false,
+//            passwd = false,
+//            name = true,
+//            emailAddress = true,
+//            phoneNum = true,
+//            address = true,
+//            birth = true,
+//            sex = true,
+//            shippingInfo = false,
+//            paymentInfo = true
+//        )
 
 
     }
 
     fun insertService(serviceName : String, serviceDomain : String, policyDomain : String) {
-        lateinit var service : Service
-        service.serviceName = serviceName
-        service.serviceDomain = serviceDomain
-        service.policyDomain
-
+        val service = Service(serviceName, serviceDomain, policyDomain)
         val serviceDB : ServiceDatabase = ServiceDatabase.getServiceDBInstance(this.applicationContext)
         serviceDB.serviceDao().insertService(service)
 
@@ -120,20 +116,8 @@ class PreLoginActivity : AppCompatActivity() {
 
     fun insertPrivacy(serviceName: String, id : Boolean, passwd : Boolean, name : Boolean, emailAddress : Boolean, phoneNum : Boolean,
     address : Boolean, birth : Boolean, sex : Boolean, shippingInfo : Boolean, paymentInfo : Boolean) {
-        lateinit var privacy: Privacy
-
-        privacy.serviceName = serviceName
-        privacy.id = id
-        privacy.passwd = passwd
-        privacy.name = name
-        privacy.emailAddress = emailAddress
-        privacy.phoneNum = phoneNum
-        privacy.address = address
-        privacy.birth = birth
-        privacy.sex = sex
-        privacy.shippingInfo = shippingInfo
-        privacy.paymentInfo = paymentInfo
-
+        val privacy = Privacy(serviceName, id, passwd, name, emailAddress, phoneNum, address, birth,
+                                sex, shippingInfo, paymentInfo)
         val privacyDB : PrivacyDatabase = PrivacyDatabase.getPrivacyDBInstance(this.applicationContext)
         privacyDB.privacyDao().insertPrivacy(privacy)
 
@@ -143,10 +127,7 @@ class PreLoginActivity : AppCompatActivity() {
 
 
     fun insertConCom(comName : String, secureLevel : Int = 1, country : String = "None") {
-        lateinit var conCom : ConsignmentCompany
-        conCom.companyName = comName
-        conCom.secureLevel = secureLevel
-        conCom.country = country
+        val conCom = ConsignmentCompany(comName, secureLevel, country)
 
         val conConDB : ConComDataBase = ConComDataBase.getConComDBInstance(this.applicationContext)
         conConDB.conComDao().insertConCo(conCom)

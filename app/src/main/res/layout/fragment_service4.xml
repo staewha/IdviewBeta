@@ -14,6 +14,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/service4_title"
         android:textSize="24sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="NiackName"
+            android:textColor="@color/black"
             android:textSize="13sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -50,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Email Address"
+            android:textColor="@color/black"
             android:textSize="13sp"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -58,6 +61,7 @@
             android:layout_marginTop="29dp"
             android:text="@string/edit_prof"
             android:textSize="13sp"
+            android:textColor="@color/black"
             android:background="@drawable/gray_stroke_button"/>
     </LinearLayout>
 
@@ -78,6 +82,7 @@
             android:layout_height="52dp"
             android:background="@color/white"
             android:text="@string/announcement"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:gravity="left|center"
             style="?android:attr/borderlessButtonStyle"/>
@@ -89,6 +94,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:text="@string/app_config"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:gravity="left|center"
             style="?android:attr/borderlessButtonStyle"/>
@@ -100,6 +106,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:text="@string/app_policy"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:gravity="left|center"
             style="?android:attr/borderlessButtonStyle"/>

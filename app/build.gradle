@@ -57,4 +57,5 @@ dependencies {
     def room_version = "2.5.0"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+    // kapt "androidx.room:room-compiler:$room_version"로 써야함... 나중에 고치자 나새끼 화이팅... 복복복
 }
