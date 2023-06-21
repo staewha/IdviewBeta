@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.example.idviewbeta.databinding.ActivityLoginBinding
 import java.util.regex.Pattern
 
+
 class LoginActivity : AppCompatActivity() {
     private lateinit var loginBinding : ActivityLoginBinding
 
@@ -18,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(loginBinding.root)
 
         loginBinding.editTextLoginEmailAddress.filters = arrayOf(InputFilter { source, _, _, _, _, _ ->
-            val pwRegex = """^[0-9a-zA-Z@_]*$"""
+            val pwRegex = """^[0-9a-zA-Z@_.]*$"""
             val pwPattern = Pattern.compile(pwRegex)
             if (source.isNullOrBlank() || pwPattern.matcher(source).matches()) {
                 return@InputFilter source
@@ -40,8 +41,11 @@ class LoginActivity : AppCompatActivity() {
         loginBinding.btnLogin.setOnClickListener {
             val loginEmailAddr = loginBinding.editTextLoginEmailAddress.text.toString()
             val loginPasswd = loginBinding.editTextLoginPasswd.text.toString()
-            // 서버에 로그인 요청
 
+            val url = "login"
+
+            val connection = ConnectFlask(url)
+            connection.getServer(loginEmailAddr, loginPasswd)
             val loginIntent = Intent(this@LoginActivity, HomeActivity::class.java)
             startActivity(loginIntent)
         }

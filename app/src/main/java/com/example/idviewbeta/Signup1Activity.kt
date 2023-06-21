@@ -68,6 +68,7 @@ class Signup1Activity : AppCompatActivity() {
                     // 이후 비밀번호와 이메일은 서버로 보내야 할 듯?
                     // 앱에 저장을.. 어떻게 해야할 지 모르겠어서 일단 보류할게요.
                 }
+
             }
             override fun afterTextChanged(p0: Editable?) {}
         })
@@ -77,6 +78,13 @@ class Signup1Activity : AppCompatActivity() {
             IntroActivity.prefEditor.putString("UserEmail", userEmail.text.toString())
             IntroActivity.prefEditor.apply()
             Log.v("pref_result", IntroActivity.pref.getString("UserEmail", "Value is empty").toString())
+            val email = userEmail.text.toString()
+            val password = userPasswd.text.toString()
+            val url = "signup"
+
+            val connection = ConnectFlask(url)
+            connection.getServer(email, password)
+
             val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
             startActivity(signup1Intent)
         }
