@@ -39,5 +39,4 @@ class Service2Fragment : Fragment() {
             }
         }.attach()
     }
-
 }

@@ -1,23 +1,27 @@
 package com.example.idviewbeta
 
+import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.InputFilter
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import java.util.regex.Pattern
 
 class Signup1Activity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup1)
 
         // email 입력 내용 확인
-        val userEmail = findViewById<TextView>(R.id.editTextTextEmailAddress)
+        val userEmail = findViewById<TextView>(R.id.editTextEmailAddress)
         val emailCheck = findViewById<TextView>(R.id.checkEmail)
         val emailPattern : Pattern = android.util.Patterns.EMAIL_ADDRESS
         userEmail.addTextChangedListener(object : TextWatcher {
@@ -31,8 +35,8 @@ class Signup1Activity : AppCompatActivity() {
         })
 
 
-        val userPasswd = findViewById<TextView>(R.id.signup1Passwd)
-        val reUserPasswd = findViewById<TextView>(R.id.signupRePasswd)
+        val userPasswd = findViewById<TextView>(R.id.editTextTextPassword)
+        val reUserPasswd = findViewById<TextView>(R.id.editTextTextPassword2)
 
         val passwdCheck = findViewById<TextView>(R.id.matchPasswd)
 
@@ -71,6 +75,9 @@ class Signup1Activity : AppCompatActivity() {
 
         val btnNextSignup1 = findViewById<Button>(R.id.btnNextSignup1)
         btnNextSignup1.setOnClickListener {
+            IntroActivity.prefEditor.putString("UserEmail", userEmail.text.toString())
+            IntroActivity.prefEditor.apply()
+            Log.v("pref_result", IntroActivity.pref.getString("UserEmail", "Value is empty").toString())
             val email = userEmail.text.toString()
             val password = userPasswd.text.toString()
             val url = "signup"
