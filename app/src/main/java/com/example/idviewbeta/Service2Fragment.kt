@@ -2,6 +2,7 @@ package com.example.idviewbeta
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +13,16 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class Service2Fragment : Fragment() {
     private lateinit var service2Binding:FragmentService2Binding
+    var googleFlag = false
+    var kakaoFlag = false
+    var naverFlag = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         service2Binding = FragmentService2Binding.inflate(inflater, container, false)
         return service2Binding.root
     }
@@ -28,7 +33,7 @@ class Service2Fragment : Fragment() {
         val service2Tab = service2Binding.service2Tab
         val service2ViewPager = service2Binding.service2ViewPager
 
-        service2ViewPager.adapter = Service2Adapter(this, false, false, false)
+        service2ViewPager.adapter = Service2Adapter(this, true, kakaoFlag, naverFlag)
 
         TabLayoutMediator(service2Tab, service2ViewPager) { tab, position ->
             when(position) {

@@ -8,6 +8,7 @@ import android.graphics.Canvas
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -15,11 +16,13 @@ import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.googlecode.tesseract.android.TessBaseAPI
 import com.example.idviewbeta.ConnectCiActivity
+import kotlinx.android.synthetic.main.fragment_service1.*
 import java.io.*
 
 class WebGoogleActivity : AppCompatActivity() {
     lateinit var dataPath : String
     lateinit var tessBaseAPI: TessBaseAPI
+    var flag = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,11 +61,14 @@ class WebGoogleActivity : AppCompatActivity() {
 
         floatingBtnGoogle.setOnClickListener {
             Log.v("floatBtn", "Click listener of floatting action button")
+            flag = true
+            Log.v("googleFlag", flag.toString())
+
             var top = 0
             val contentHeight = googleWebView.contentHeight
             var ocrResult = ""
             Thread {
-                while (!ocrResult.contains("약관")) {
+                while (!ocrResult.contains("Privacy")) {
                     val captureBitmap = capture()
                     ocrResult = processImage(captureBitmap)
                     top += googleWebView.height

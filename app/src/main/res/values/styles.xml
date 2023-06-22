@@ -13,4 +13,7 @@
     <style name="flashStateBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@color/primary_500</item>
     </style>
+    <style name="serviceHomeStateBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/background_gray</item>
+    </style>
 </resources>
