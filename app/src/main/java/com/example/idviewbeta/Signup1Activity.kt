@@ -85,14 +85,31 @@ class Signup1Activity : AppCompatActivity() {
 
             val connection = ConnectFlask(url)
             Thread {
-                connection.getServer(email, password, "")
+                connection.getServer(email, password, object : ServerCallback {
+                    override fun onSuccess(response: String?) {
+                        Thread {
+                            if (response == "로그인 성공") {
+                                // 회원가입 성공 시 처리
+                                val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
+                                signup1Intent.putExtra("email", email)
+                                signup1Intent.putExtra("password", password)
+
+                                startActivity(signup1Intent)
+                            } else {
+                                // 로그인 실패 시 처리
+                                makeToast("이메일 또는 비밀번호를 정확하게 입력해주세요.")
+                            }
+                        }.start()                    }
+
+                    override fun onFailure() {}
+                })
             }.start()
 
-            val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
-            signup1Intent.putExtra("email", email)
-            signup1Intent.putExtra("password", password)
-
-            startActivity(signup1Intent)
+//            val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
+//            signup1Intent.putExtra("email", email)
+//            signup1Intent.putExtra("password", password)
+//
+//            startActivity(signup1Intent)
         }
     }
 

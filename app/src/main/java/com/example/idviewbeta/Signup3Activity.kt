@@ -34,7 +34,6 @@ class Signup3Activity : AppCompatActivity() {
             Log.v("pref_result", pref.getString("NickName", "Value is empty").toString())
             val sign3Intent = Intent(this@Signup3Activity, HomeActivity::class.java)
             startActivity(sign3Intent)
-            // 닉네임을 받자니 아이디와 비밀번호를 다른 곳에서 받고 있어서
         }
     }
 }

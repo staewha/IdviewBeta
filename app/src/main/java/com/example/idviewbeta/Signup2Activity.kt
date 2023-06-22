@@ -62,16 +62,7 @@ class Signup2Activity : AppCompatActivity() {
             }
         }
 
-        // Signup1Activity에서 전달된 로그인 정보를 받아서 Signup3Activity에 넘겨줌
-        val email = intent.getStringExtra("email")
-        val password = intent.getStringExtra("password")
-        signup2Binding.btnPolicyNext.setOnClickListener {
-            signup2Intent = Intent(this@Signup2Activity, Signup3Activity::class.java)
-            signup2Intent.putExtra("email", email)
-            signup2Intent.putExtra("password", password)
 
-            startActivity(signup2Intent)
-        }
 
     }
 

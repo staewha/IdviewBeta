@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.InputFilter
 import android.widget.Toast
 import com.example.idviewbeta.databinding.ActivityLoginBinding
+
 import java.util.regex.Pattern
 
 
@@ -45,11 +46,11 @@ class LoginActivity : AppCompatActivity() {
             val url = "login"
 
             val connection = ConnectFlask(url)
-            connection.getServer(loginEmailAddr, loginPasswd, loginNickNme, object : ServerCallback {
-                override fun onSuccess(response: String) {
+            connection.getServer(loginEmailAddr, loginPasswd, object : ServerCallback {
+                override fun onSuccess(response: String?) {
                     // 서버로부터 로그인 결과를 받았을 때 호출되는 콜백 함수
-                    runOnUiThread {
-                        if (response == "success") {
+                    Thread {
+                        if (response == "로그인 성공") {
                             // 로그인 성공 시 처리
                             val loginIntent = Intent(this@LoginActivity, HomeActivity::class.java)
                             startActivity(loginIntent)
@@ -57,14 +58,14 @@ class LoginActivity : AppCompatActivity() {
                             // 로그인 실패 시 처리
                             makeToast("이메일 또는 비밀번호가 일치하지 않습니다.")
                         }
-                    }
+                    }.start()
                 }
 
                 override fun onFailure() {
                     // 서버 요청 실패 시 호출되는 콜백 함수
-                    runOnUiThread {
+                    Thread {
                         makeToast("서버 요청 실패")
-                    }
+                    }.start()
                 }
             })
         }
