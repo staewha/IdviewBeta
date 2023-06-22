@@ -89,6 +89,9 @@ class Signup1Activity : AppCompatActivity() {
             }.start()
 
             val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
+            signup1Intent.putExtra("email", email)
+            signup1Intent.putExtra("password", password)
+
             startActivity(signup1Intent)
         }
     }

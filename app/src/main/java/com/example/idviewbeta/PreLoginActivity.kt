@@ -16,11 +16,13 @@ class PreLoginActivity : AppCompatActivity() {
         val loginTextView = findViewById<TextView>(R.id.connect_login)
         val signupButton = findViewById<Button>(R.id.btnSignup)
 
+        // 로그인
         loginTextView.setOnClickListener {
             val connectLoginIntent = Intent(this@PreLoginActivity, LoginActivity::class.java)
             startActivity(connectLoginIntent)
         }
 
+        // 회원가입
         signupButton.setOnClickListener {
             val connectSignupIntent = Intent(this@PreLoginActivity, Signup1Activity::class.java)
             startActivity(connectSignupIntent)
