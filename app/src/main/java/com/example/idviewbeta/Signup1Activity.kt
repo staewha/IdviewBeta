@@ -78,12 +78,15 @@ class Signup1Activity : AppCompatActivity() {
             IntroActivity.prefEditor.putString("UserEmail", userEmail.text.toString())
             IntroActivity.prefEditor.apply()
             Log.v("pref_result", IntroActivity.pref.getString("UserEmail", "Value is empty").toString())
+            // 회원가입 정보 서버로 넘기기
             val email = userEmail.text.toString()
             val password = userPasswd.text.toString()
             val url = "signup"
 
             val connection = ConnectFlask(url)
-            connection.getServer(email, password)
+            Thread {
+                connection.getServer(email, password, "")
+            }.start()
 
             val signup1Intent = Intent(this@Signup1Activity, Signup2Activity::class.java)
             startActivity(signup1Intent)

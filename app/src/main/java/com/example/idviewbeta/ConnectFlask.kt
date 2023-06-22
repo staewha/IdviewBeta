@@ -10,7 +10,7 @@ import java.io.IOException
 class ConnectFlask(private val url: String) {
     // API 엔드포인트 설정
     private val testUrl: String = "http://localhost/api/$url"
-    fun getServer(loginEmailAddr:String, loginPasswd:String) {
+    fun getServer(loginEmailAddr:String, loginPasswd:String, loginNickname: String) {
         try {
             // OkHttpClient 생성
             val client = OkHttpClient()
@@ -19,6 +19,7 @@ class ConnectFlask(private val url: String) {
             val json = JSONObject()
             json.put("email", loginEmailAddr)
             json.put("password", loginPasswd)
+            json.put("nickname", loginNickname)
             // 요청 헤더에 'Content-Type: application/json' 설정
             val mediaType = "application/json".toMediaType()
             val requestBody = json.toString().toRequestBody(mediaType)
